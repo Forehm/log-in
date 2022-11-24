@@ -36,7 +36,7 @@ public:
 
 	void GetInfo()
 	{
-		cout << data << endl; ///// временная функция, которую мне стало лень удалять
+		cout << data << endl; 
 	}
 
 	
@@ -86,7 +86,7 @@ void Profil::LogIn()
 			counter++;
 			if (counter == ProfilesList.size())
 			{
-				throw LogInException("Упс... Пользователя с таким логином и паролем не существует");
+				throw LogInException("oops, there is no account with such name");
 			}
 			
 		}
@@ -111,9 +111,9 @@ int main()
 {
 	setlocale(LC_ALL, "ru");
 	
-	Profil Mark("Mark", "mark3321", "Любит чиспы", Profil::SubscribersStatus::IsSubscribed);
-	Profil Kirill("Kirill", "Kira1937", "Увлекается историей Англии", Profil::SubscribersStatus::IsNotSubscribed);
-	Profil Egor("EGor", "135241", "Я Егор", Profil::SubscribersStatus::IsSubscribed);
+	Profil Mark("Mark", "mark3321", "likes pasta", Profil::SubscribersStatus::IsSubscribed);
+	Profil Kirill("Kirill", "Kira1937", "is fond of England history", Profil::SubscribersStatus::IsNotSubscribed);
+	Profil Egor("EGor", "135241", "Is a lord", Profil::SubscribersStatus::IsSubscribed);
 	try
 	{
 		Profil::LogIn();
